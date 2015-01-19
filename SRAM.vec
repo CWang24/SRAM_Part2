@@ -1,0 +1,63 @@
+radix 2 4 2 4 4 4 4 4 4 4 4 4 1 1 1 1 1 1 1
+io  i  i  i  i  i  i  i  i  i  i  i  i  i  i  i  i  i  i  i
+vname A[5:4] A[3:0] ~A[5:4] ~A[3:0] data[15:12] data[11:8] data[7:4] data[3:0] ~data[15:12] ~data[11:8] ~data[7:4] ~data[3:0]  read_en write_en   precharge_en WL_en  clk  clk_bar reset  
+slope 0.01
+vih 1.8
+tunit ns
+0   3 E C 1 0 1 D F F E 2 0 1 0 0 0 1 0 1;STORE 3E #01DF
+4.5   3 E C 1 0 1 D F F E 2 0 1 1 1 1 1 0 1;STORE 3E #01DF
+7.5   3 E C 1 0 1 D F F E 2 0 1 1 1 0 1 0 1;STORE 3E #01DF
+8.5   1 B E 4 D 9 8 1 2 6 7 E 1 0 0 0 1 0 1;STORE 1B #D981
+13   1 B E 4 D 9 8 1 2 6 7 E 1 1 1 1 1 0 1;STORE 1B #D981
+16   1 B E 4 D 9 8 1 2 6 7 E 1 1 1 0 1 0 1;STORE 1B #D981
+17   0 4 F B 0 0 0 0 F F F F 1 0 0 0 1 0 1;STORE 04 #0000
+21.5   0 4 F B 0 0 0 0 F F F F 1 1 1 1 1 0 1;STORE 04 #0000
+24.5   0 4 F B 0 0 0 0 F F F F 1 1 1 0 1 0 1;STORE 04 #0000
+25.5   0 5 F A 0 0 0 1 F F F E 1 0 0 0 1 0 1;STORE 05 #0001
+30   0 5 F A 0 0 0 1 F F F E 1 1 1 1 1 0 1;STORE 05 #0001
+33   0 5 F A 0 0 0 1 F F F E 1 1 1 0 1 0 1;STORE 05 #0001
+34   3 C C 3 0 0 0 0 F F F F 1 0 0 0 1 0 1;STORE 3C #0000
+38.5   3 C C 3 0 0 0 0 F F F F 1 1 1 1 1 0 1;STORE 3C #0000
+41.5   3 C C 3 0 0 0 0 F F F F 1 1 1 0 1 0 1;STORE 3C #0000
+42.5   3 D C 2 0 0 0 1 F F F E 1 0 0 0 1 0 1;STORE 3D #0001
+47   3 D C 2 0 0 0 1 F F F E 1 1 1 1 1 0 1;STORE 3D #0001
+50   3 D C 2 0 0 0 1 F F F E 1 1 1 0 1 0 1;STORE 3D #0001
+51   3 E C 1 0 0 0 2 F F F D 1 0 0 0 1 0 1;STORE 3E #0002
+55.5   3 E C 1 0 0 0 2 F F F D 1 1 1 1 1 0 1;STORE 3E #0002
+58.5   3 E C 1 0 0 0 2 F F F D 1 1 1 0 1 0 1;STORE 3E #0002
+59.5   3 F C 0 0 0 0 3 F F F C 1 0 0 0 1 0 1;STORE 3F #0003
+64   3 F C 0 0 0 0 3 F F F C 1 1 1 1 1 0 1;STORE 3F #0003
+67   3 F C 0 0 0 0 3 F F F C 1 1 1 0 1 0 1;STORE 3F #0003
+68   3 E C 1 0 0 0 0 F F F F 0 0 0 0 0 1 1;LOAD 3E R1
+72.5   3 E C 1 0 0 0 0 F F F F 0 0 1 1 1 0 1;LOAD 3E R1
+73.5   3 E C 1 0 0 0 0 F F F F 0 0 1 0 1 0 1;LOAD 3E R1
+74.5   3 E C 1 0 0 0 0 F F F F 1 0 0 0 1 0 1;LOAD 3E R1
+76.5   1 B E 4 0 0 0 0 F F F F 0 0 0 0 0 1 1;LOAD 1B R1
+81   1 B E 4 0 0 0 0 F F F F 0 0 1 1 1 0 1;LOAD 1B R1
+82   1 B E 4 0 0 0 0 F F F F 0 0 1 0 1 0 1;LOAD 1B R1
+83   1 B E 4 0 0 0 0 F F F F 1 0 0 0 1 0 1;LOAD 1B R1
+85   0 4 F B 0 0 0 0 F F F F 0 0 0 0 0 1 1;LOAD 04 R1
+89.5   0 4 F B 0 0 0 0 F F F F 0 0 1 1 1 0 1;LOAD 04 R1
+90.5   0 4 F B 0 0 0 0 F F F F 0 0 1 0 1 0 1;LOAD 04 R1
+91.5   0 4 F B 0 0 0 0 F F F F 1 0 0 0 1 0 1;LOAD 04 R1
+93.5   0 5 F A 0 0 0 0 F F F F 0 0 0 0 0 1 1;LOAD 05 R1
+98   0 5 F A 0 0 0 0 F F F F 0 0 1 1 1 0 1;LOAD 05 R1
+99   0 5 F A 0 0 0 0 F F F F 0 0 1 0 1 0 1;LOAD 05 R1
+100   0 5 F A 0 0 0 0 F F F F 1 0 0 0 1 0 1;LOAD 05 R1
+102   3 C C 3 0 0 0 0 F F F F 0 0 0 0 0 1 1;LOAD 3C R1
+106.5   3 C C 3 0 0 0 0 F F F F 0 0 1 1 1 0 1;LOAD 3C R1
+107.5   3 C C 3 0 0 0 0 F F F F 0 0 1 0 1 0 1;LOAD 3C R1
+108.5   3 C C 3 0 0 0 0 F F F F 1 0 0 0 1 0 1;LOAD 3C R1
+110.5   3 D C 2 0 0 0 0 F F F F 0 0 0 0 0 1 1;LOAD 3D R1
+115   3 D C 2 0 0 0 0 F F F F 0 0 1 1 1 0 1;LOAD 3D R1
+116   3 D C 2 0 0 0 0 F F F F 0 0 1 0 1 0 1;LOAD 3D R1
+117   3 D C 2 0 0 0 0 F F F F 1 0 0 0 1 0 1;LOAD 3D R1
+119   3 E C 1 0 0 0 0 F F F F 0 0 0 0 0 1 1;LOAD 3E R1
+123.5   3 E C 1 0 0 0 0 F F F F 0 0 1 1 1 0 1;LOAD 3E R1
+124.5   3 E C 1 0 0 0 0 F F F F 0 0 1 0 1 0 1;LOAD 3E R1
+125.5   3 E C 1 0 0 0 0 F F F F 1 0 0 0 1 0 1;LOAD 3E R1
+127.5   3 F C 0 0 0 0 0 F F F F 0 0 0 0 0 1 1;LOAD 3F R1
+132   3 F C 0 0 0 0 0 F F F F 0 0 1 1 1 0 1;LOAD 3F R1
+133   3 F C 0 0 0 0 0 F F F F 0 0 1 0 1 0 1;LOAD 3F R1
+134   3 F C 0 0 0 0 0 F F F F 1 0 0 0 1 0 1;LOAD 3F R1
+136   3 F C 0 0 0 0 0 F F F F 0 0 0 0 0 1 1;last line to create a negtive edge for clk
