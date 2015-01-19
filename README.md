@@ -33,3 +33,39 @@ Using this perl script, I generate the vector file: [SRAM.vec](in the attachment
 Then I run the simulation with this .vec file:
 This is the output waveform:
 ![image] (https://dl.dropboxusercontent.com/s/q4kg9ns9enu3qil/image1.png?dl=0)
+### Part B
+I select the 16 output curves and export them to the file [final.csv] ().
+Based on that, I wrote the [2.pl](). This 2.pl reads the original [cmd.txt]() first. Then record every store and load instruction with corresponding information. And save the result to @stores and @loads for future search and compare.
+Then I read the [final.csv]() file. After reading each line, I do a search of address, then do the comparison to see whether the original data matches with the curve.
+After running the 2.pl, you will see the following on the screen.
+
+```
+These are the previous store operations: 3E 01DF 1B D981 04 0000 05 0001 3C 0000 3D 0001 3E 0002 3F 0003
+These are the previous load operations: 3E 1B 04 05 3C 3D 3E 3F
+This is the 1 th load operation
+At time: 8.100000000000001e-08s,
+/Q15 Y  voltage is : 4.769173537690983e-08V,  logic 0;
+/Q14 Y  voltage is : 4.499431426169047e-08V,  logic 0;
+/Q13 Y  voltage is : 4.499763652345857e-08V,  logic 0;
+/Q12 Y  voltage is : 4.499330422286358e-08V,  logic 0;
+/Q11 Y  voltage is : 4.499734898606711e-08V,  logic 0;
+/Q10 Y  voltage is : 4.49996779898771e-08V,  logic 0;
+/Q9 Y  voltage is : 4.499964022576939e-08V,  logic 0;
+/Q8 Y  voltage is : 4.498507223752111e-08V,  logic 0;
+/Q7 Y  voltage is : 4.498568913752264e-08V,  logic 0;
+/Q6 Y  voltage is : 4.498529899670549e-08V,  logic 0;
+/Q5 Y  voltage is : 4.499601501038737e-08V,  logic 0;
+/Q4 Y  voltage is : 4.498322587376798e-08V,  logic 0;
+/Q3 Y  voltage is : 4.498312785523406e-08V,  logic 0;
+/Q2 Y  voltage is : 4.498518690581983e-08V,  logic 0;
+/Q1 Y  voltage is : 1.799999931154078V,  logic 1;
+/Q0 Y  voltage is : 4.591569925471063e-08V,  logic 0;
+The 16bits data we get is: 00000000000000010, convert to hex is 2.
+Since we are loading from 3E, the data stores at address 3E is CORRECT.
+ It should be 0002, and it is 2 actually.
+This is the 2 th load operation
+at time: 8.950000000000001e-08s,
+/Q15 Y  voltage is : 1.799999940872926V,  logic 1;
+/Q14 Y  voltage is : 1.79999994157321V,  logic 1;
+/Q13 Y  voltage is : 2.70608968379603e-09V,  logic 0;
+```
