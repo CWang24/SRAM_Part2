@@ -35,7 +35,7 @@ This is the output waveform:
 ![image] (https://dl.dropboxusercontent.com/s/q4kg9ns9enu3qil/image1.png?dl=0)
 ### Part B. Functional Verification using Perl
 I select the 16 output curves and export them to the file [final.csv] (https://github.com/CWang24/SRAM_Part2/blob/master/final.csv).
-Based on that, I wrote the [2.pl](https://github.com/CWang24/SRAM_Part2/blob/master/2.pl). This 2.pl reads the original [cmd.txt](https://github.com/CWang24/SRAM_Part2/blob/master/cmd.txt) first. Then record every store and load instruction with corresponding information. And save the result to @stores and @loads for future search and compare.
+Based on that, I wrote the [2.pl](https://github.com/CWang24/SRAM_Part2/blob/master/2.pl). This 2.pl reads the original [cmd.txt](https://github.com/CWang24/SRAM_Part2/blob/master/cmd.txt) first, then records every store and load instruction with corresponding information. And save the result to hash tables @stores and @loads for future search and compare.
 Then I read the [final.csv](https://github.com/CWang24/SRAM_Part2/blob/master/final.csv) file. After reading each line, I do a search of address, then do the comparison to see whether the original data matches with the curve.
 After running the 2.pl, you will see the following on the console panel or cmd screen.
 
@@ -69,3 +69,4 @@ at time: 8.950000000000001e-08s,
 /Q14 Y  voltage is : 1.79999994157321V,  logic 1;
 /Q13 Y  voltage is : 2.70608968379603e-09V,  logic 0;
 ```
+Result verification done.
