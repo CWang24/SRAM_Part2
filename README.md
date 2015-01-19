@@ -1,7 +1,7 @@
 # SRAM_Part2
 
 ### Part A
-For the detail of the code, please refer to the commends in [1.pl] ()
+For the detail of the code, please refer to the commends in [1.pl] (https://github.com/CWang24/SRAM_Part2/blob/master/1.pl)
 The main output part is as follows:
 ```Perl
    if($row_elements[0]eq"STORE")
@@ -29,15 +29,15 @@ The main output part is as follows:
 
 As you can see, every store operation needs 3 stages, while every load operation needs 4.<br />
 
-Using this perl script, I generate the vector file: [SRAM.vec](in the attachment)
+Using this perl script, I generate the vector file: [SRAM.vec](https://github.com/CWang24/SRAM_Part2/blob/master/SRAM.vec)
 Then I run the simulation with this .vec file:
 This is the output waveform:
 ![image] (https://dl.dropboxusercontent.com/s/q4kg9ns9enu3qil/image1.png?dl=0)
 ### Part B
-I select the 16 output curves and export them to the file [final.csv] ().
-Based on that, I wrote the [2.pl](). This 2.pl reads the original [cmd.txt]() first. Then record every store and load instruction with corresponding information. And save the result to @stores and @loads for future search and compare.
-Then I read the [final.csv]() file. After reading each line, I do a search of address, then do the comparison to see whether the original data matches with the curve.
-After running the 2.pl, you will see the following on the screen.
+I select the 16 output curves and export them to the file [final.csv] (https://github.com/CWang24/SRAM_Part2/blob/master/final.csv).
+Based on that, I wrote the [2.pl](https://github.com/CWang24/SRAM_Part2/blob/master/2.pl). This 2.pl reads the original [cmd.txt](https://github.com/CWang24/SRAM_Part2/blob/master/cmd.txt) first. Then record every store and load instruction with corresponding information. And save the result to @stores and @loads for future search and compare.
+Then I read the [final.csv](https://github.com/CWang24/SRAM_Part2/blob/master/final.csv) file. After reading each line, I do a search of address, then do the comparison to see whether the original data matches with the curve.
+After running the 2.pl, you will see the following on the console panel or cmd screen.
 
 ```
 These are the previous store operations: 3E 01DF 1B D981 04 0000 05 0001 3C 0000 3D 0001 3E 0002 3F 0003
