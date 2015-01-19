@@ -1,6 +1,6 @@
 # SRAM_Part2
 
-### Part A
+### Part A. Burst Operation using Perl
 For the detail of the code, please refer to the commends in [1.pl] (https://github.com/CWang24/SRAM_Part2/blob/master/1.pl)
 The main output part is as follows:
 ```Perl
@@ -33,7 +33,7 @@ Using this perl script, I generate the vector file: [SRAM.vec](https://github.co
 Then I run the simulation with this .vec file:
 This is the output waveform:
 ![image] (https://dl.dropboxusercontent.com/s/q4kg9ns9enu3qil/image1.png?dl=0)
-### Part B
+### Part B. Functional Verification using Perl
 I select the 16 output curves and export them to the file [final.csv] (https://github.com/CWang24/SRAM_Part2/blob/master/final.csv).
 Based on that, I wrote the [2.pl](https://github.com/CWang24/SRAM_Part2/blob/master/2.pl). This 2.pl reads the original [cmd.txt](https://github.com/CWang24/SRAM_Part2/blob/master/cmd.txt) first. Then record every store and load instruction with corresponding information. And save the result to @stores and @loads for future search and compare.
 Then I read the [final.csv](https://github.com/CWang24/SRAM_Part2/blob/master/final.csv) file. After reading each line, I do a search of address, then do the comparison to see whether the original data matches with the curve.
